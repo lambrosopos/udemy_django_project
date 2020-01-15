@@ -21,3 +21,6 @@ urlpatterns = [
     path('second_app/', include('second_app.urls')),
     path('admin/', admin.site.urls),
 ]
+
+
+# Heck is this working?
