@@ -20,7 +20,7 @@ def addTopic():
     return t
 
 def populate(N=5):
-    for entry in range(N):
+    for _ in range(N):
 
         # Get topic for entry
         top = addTopic()
