@@ -5,12 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Index Page</title>
-  <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
+  <title>Starting Page</title>
+  <link rel="stylesheet" href="{% static "css/indexStyle.css" %}" />
 </head>
 <body>
-  <h1>Hello this is index.html</h1>
-  {{ insert_me }}
-  <img src="{% static "images/siliconvalley.jpeg" %}" alt="Unable to Load">
+   <h1>Welcome to the Starting</h1>
+   <h2>Access Records</h2>
+
+   <div class="djangtwo">
+    {% if access_records %}
+      <table>
+        <thead>
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+        </thead>
+        
+        {% for acc in access_records %}
+        <tr>
+          <td>{{ acc.name }}</td>
+          <td>{{ acc.date }}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+
+      {% else %}
+      <p>No Access Records Found</p>
+
+      {% endif %}
+   </div>
 </body>
 </html>
