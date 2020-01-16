@@ -7,7 +7,7 @@ django.setup()
 ## Fake pop settings
 
 import random
-from first_app.models import AccessRecord, Topic, Webpage
+from first_app.models import AccessRecord, Topic, Webpage, Users
 from faker import Faker
 
 fakegen = Faker()
@@ -35,6 +35,15 @@ def populate(N=5):
 
         # Create fake access record for the webpage
         acc_rec = AccessRecord.objects.get_or_create(name=webpg, date=fake_date)[0]
+
+        # Get Name for entry
+        fake_username = fakegen.name().split()
+        fake_firstName = fake_username[0]
+        fake_lastName = fake_username[1]
+
+        fake_email = fakegen.email()
+
+        user = Users.objects.get_or_create(firstName=fake_firstName, lastName=fake_lastName, email=fake_email)[0]
 
 if __name__ == "__main__":
     print('populating script')

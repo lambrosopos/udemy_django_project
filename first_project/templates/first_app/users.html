@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" href="{% static "css/usersStyle.css" %}">
+</head>
+<body>
+    <h1>Users List</h1>
+    
+    <div class="usersList">
+        {% if users %}
+        <table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+            </thead>
+
+            {% for user in users %}
+            <tr>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No Users Available</p>
+
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
