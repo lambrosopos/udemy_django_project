@@ -25,26 +25,26 @@
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col">
-                        <label for="formGroupExampleInput">First Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John">
+                        <label for="id_firstName">First Name</label>
+                        <input type="text" class="form-control" id="id_firstName" name="firstName" placeholder="John">
                     </div>
                     <div class="col">
-                        <label for="formGroupExampleInput">Last Name</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Smith">
+                        <label for="id_lastName">Last Name</label>
+                        <input type="text" class="form-control" id="id_lastName" name="lastName" placeholder="Smith">
                     </div>
                 </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@domain.com">
+              <label for="id_email">Email address</label>
+              <input type="email" name="email" class="form-control" id="id_email" aria-describedby="emailHelp" placeholder="example@domain.com">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="At least 5 characters long">
+              <label for="id_password">Password</label>
+              <input type="text" name="password" class="form-control" id="id_password" placeholder="At least 5 characters long">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Verify Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="At least 5 characters long">
+                <label for="id_verifyPassword">Verify Password</label>
+                <input type="text" name="verifyPassword" class="form-control" id="id_verifyPassword" placeholder="At least 5 characters long">
               </div>
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
