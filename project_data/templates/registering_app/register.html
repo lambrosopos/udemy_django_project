@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="{% static "index/css/serve.css" %}">
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Qetroux</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/register/">Login</a>
+        </li>
+      </ul>
+    </div>
+</nav>
     <div class="container">
         <div class="jumbotron">
             <div class="welcome-message">
@@ -26,29 +39,30 @@
                 <div class="form-row">
                     <div class="col">
                         <label for="id_firstName">First Name</label>
-                        <input type="text" class="form-control" id="id_firstName" name="firstName" placeholder="John">
+                        <input type="text" class="form-control" id="id_firstName" name="firstName" placeholder="John" value="John">
                     </div>
                     <div class="col">
                         <label for="id_lastName">Last Name</label>
-                        <input type="text" class="form-control" id="id_lastName" name="lastName" placeholder="Smith">
+                        <input type="text" class="form-control" id="id_lastName" name="lastName" placeholder="Smith" value="Smith">
                     </div>
                 </div>
             <div class="form-group">
               <label for="id_email">Email address</label>
-              <input type="email" name="email" class="form-control" id="id_email" aria-describedby="emailHelp" placeholder="example@domain.com">
+              <input type="email" name="email" class="form-control" id="id_email" aria-describedby="emailHelp" placeholder="example@domain.com" value="example@domain.com">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label for="id_password">Password</label>
-              <input type="text" name="password" class="form-control" id="id_password" placeholder="At least 5 characters long">
+              <input type="password" name="password" class="form-control" id="id_password" placeholder="At least 5 characters long">
             </div>
             <div class="form-group">
                 <label for="id_verifyPassword">Verify Password</label>
-                <input type="text" name="verifyPassword" class="form-control" id="id_verifyPassword" placeholder="At least 5 characters long">
+                <input type="password" name="verifyPassword" class="form-control" id="id_verifyPassword" placeholder="At least 5 characters long">
+                <small class="form-text text-muted">{% if message %}{{ message }}{% endif %}</small>
               </div>
             <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label text-muted" for="exampleCheck1">I agree to the terms and conditions</label>
+              <input type="checkbox" name="agreement" class="form-check-input" id="id_agreement">
+              <label for="id_agreement" class="form-check-label text-muted" for="exampleCheck1">I agree to the terms and conditions</label>
             </div>
             <div class="submit-btn">
                 <button type="submit" class="btn btn-primary btn-lg btn-block" style="height: 80%;">Submit</button>
