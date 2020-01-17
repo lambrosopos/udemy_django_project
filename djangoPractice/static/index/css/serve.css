@@ -1,0 +1,27 @@
+#exampleInputEmail1 {
+    width: 40%;
+}
+
+#exampleInputPassword1 {
+    width: 40%;
+}
+
+
+
+#formGroupExampleInput {
+    width: 100%;
+}
+
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.welcome-message {
+    text-align: center;
+}
+
+.serve-form {
+    padding-left: 25%;
+    padding-right: 25%;
+}

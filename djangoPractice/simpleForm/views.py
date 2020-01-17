@@ -7,4 +7,4 @@ def index(request):
 
 
 def login_form(request):
-    pass
+    return render(request, "simpleForm/serve.html")
