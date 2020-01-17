@@ -1,0 +1,48 @@
+/* General Text */
+body {
+    background-image: url("../images/background.jpeg") no-repeat;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.serveButton {
+    padding: 20px;
+    text-align: center;
+}
+
+/* .serveButtonDescription {
+    text-align: center;
+    font-style: italic;
+} */
+
+
+/* Image Configurations */
+img {
+    max-width : 100%;
+    height : auto;
+}
+
+#ttanttan {
+    width : auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ttanttanText {
+    height: 250px;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+.ttanttanImg {
+    height: 250px;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+/* Containers */
+#content {
+    padding-top : 1%;
+}
