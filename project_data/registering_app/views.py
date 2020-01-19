@@ -4,7 +4,9 @@ from django import forms
 
 # Create your views here.
 def index(request):
-    return render(request, "registering_app/index.html")
+    practice_dict = {'text':"Simple text with mixed words",
+                     "Number": 100}
+    return render(request, "registering_app/index.html", practice_dict)
 
 def register(request):
 
