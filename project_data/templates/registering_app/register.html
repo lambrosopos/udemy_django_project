@@ -3,12 +3,12 @@
 {% load staticfiles %}
 
 {% block head_block %}
-<title>Register</title>
-<link rel="stylesheet" href="{% static "index/css/serve.css" %}">
+  <title>Register</title>
+  <link rel="stylesheet" href="{% static "index/css/serve.css" %}">
 {% endblock %}
 
 {% block body_block %}
-<div class="jumbotron">
+  <div class="jumbotron">
         <div class="welcome-message">
             <h1 class="display-4">Ready to Serve?</h1>
             <p class="font-weight-light">We are glad you have come to the right decision to serve TTANTTAN.
@@ -18,7 +18,7 @@
         </div>
 
       <div class="serve-form">
-          <form method="POST">
+          <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-row">
                 <div class="col">
@@ -54,5 +54,5 @@
       </form>
     </div>
     </div>
-</div>
+  </div>
 {% endblock %}
