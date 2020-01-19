@@ -3,54 +3,54 @@
 {% load staticfiles %}
 {% load custom_tags %}
 
-    {% block head_block %}
-        <title>Landing Page</title>
-        <link rel="stylesheet" href="{% static "index/css/generalStyle.css" %}">
-    {% endblock %}
+{% block head_block %}
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{% static "index/css/generalStyle.css" %}">
+{% endblock %}
 
-    {% block body_block %}
-        <div class="jumbotron">
-            <h1 class="display-3">
-                You have Landed
-            </h1>
-            <h2>{{ text|upper }}</h2>
-            <h2>{{ Number|adds100 }}</h2>
-            <hr class="my-4">
-            <div class="container" id="content">
-                <div class="row">
-                    <div class="col-3">
-                        <div class="ttanttanImg">
-                            <img id="ttanttan" src="{% static "index/images/ttanttan.jpeg" %}" class="img-thumbnail" alt="TTANTTAN is swimming...">
-                        </div>
-                    </div>
-                    <div class="col-9">
-                        <div class="ttanttanText">
-                            <div class="media">    
-                                <div class="media-body">
-                                    <h5 class="mt-0">The TTANTTAN</h5>
-                                        The "TTANTTAN" is the legendary rhinosaurus that conquered the world of flies by beating the "Lord of Flies" in a World-Fastest-Soup-Staring-Contest in B.C.5000.
-                                </div>
-                            </div>
-
-                        </div>
-                        
+{% block body_block %}
+    <div class="jumbotron">
+        <h1 class="display-3">
+            You have Landed
+        </h1>
+        <h2>{{ text|upper }}</h2>
+        <h2>{{ Number|adds100 }}</h2>
+        <hr class="my-4">
+        <div class="container" id="content">
+            <div class="row">
+                <div class="col-3">
+                    <div class="ttanttanImg">
+                        <img id="ttanttan" src="{% static "index/images/ttanttan.jpeg" %}" class="img-thumbnail" alt="TTANTTAN is swimming...">
                     </div>
                 </div>
-            
-            </div>
-        </div>
+                <div class="col-9">
+                    <div class="ttanttanText">
+                        <div class="media">    
+                            <div class="media-body">
+                                <h5 class="mt-0">The TTANTTAN</h5>
+                                    The "TTANTTAN" is the legendary rhinosaurus that conquered the world of flies by beating the "Lord of Flies" in a World-Fastest-Soup-Staring-Contest in B.C.5000.
+                            </div>
+                        </div>
 
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="jumbotron">
+        <h2 class="display-6">Interested in serving TTANTTAN?</h2>
+        <p class="lead">If you simply wish to serve TTANTTAN for the rest of your life and do nothing else, please submit the following forms</p>
         <hr class="my-4">
-
-        <div class="jumbotron">
-            <h2 class="display-6">Interested in serving TTANTTAN?</h2>
-            <p class="lead">If you simply wish to serve TTANTTAN for the rest of your life and do nothing else, please submit the following forms</p>
-            <hr class="my-4">
-            <div class="serveButton">
-                <a class="btn btn-primary btn-lg" href="{% url 'registering_app:register' %}" role="button">Serve Now</a>
-            </div>
-            <div class="text-center font-weight-light font-italic">
-                <p>It will be a great pleasure to serve TTANTTAN together</p>
-            </div>
+        <div class="serveButton">
+            <a class="btn btn-primary btn-lg" href="{% url 'registering_app:register' %}" role="button">Serve Now</a>
         </div>
-    {% endblock %}
+        <div class="text-center font-weight-light font-italic">
+            <p>It will be a great pleasure to serve TTANTTAN together</p>
+        </div>
+    </div>
+{% endblock %}
