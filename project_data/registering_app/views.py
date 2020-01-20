@@ -8,6 +8,10 @@ def index(request):
                      "Number": 100}
     return render(request, "registering_app/index.html", practice_dict)
 
+def registerUser(request):
+    return render(request, "registering_app/login.html")
+
+
 def register(request):
 
     form = NewMemberForm()
@@ -16,10 +20,11 @@ def register(request):
         form = NewMemberForm(request.POST)
 
         if form.is_valid():
-            print("Form========================================", form)
             form.save(commit=True)
             return index(request)
         else:
             return render(request, "registering_app/register.html", {"message": "Passwords don't match!"})
 
     return render(request, "registering_app/register.html", {"form":form})
+
+
