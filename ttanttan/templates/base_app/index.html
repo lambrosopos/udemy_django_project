@@ -1,0 +1,37 @@
+{% extends 'base_app/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+<title>Welcome Page</title>
+<link rel="stylesheet" href="{% static 'index/css/generalStyle.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Welcome to New Site</h1>
+    <hr class="my-4">
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-3">
+                <div class="ttanttanImg">
+                    <img id="ttanttan" src="{% static "index/images/ttanttan.jpeg" %}" class="img-thumbnail" alt="TTANTTAN is swimming...">
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="ttanttanText">
+                    <div class="media">    
+                        <div class="media-body">
+                            <h5 class="mt-0">The TTANTTAN</h5>
+                                The "TTANTTAN" is the legendary rhinosaurus that conquered the world of flies by beating the "Lord of Flies" in a World-Fastest-Soup-Staring-Contest in B.C.5000.
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
