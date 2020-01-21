@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from django.views.generic import View
 
 # Create your views here.
-def index(request):
-    return render(request, "base_app/index.html")
+class IndexView(View):
+    
+    def get(self, request):
+        return render(request, "base_app/index.html")
 
 
-def user_login(request):
-    return render(request, "base_app/login.html")
+class LoginView(View):
+
+    def get(self, request):
+        return render(request, "base_app/login.html")
