@@ -18,7 +18,7 @@ from django.urls import path, include
 from base_app import views
 
 urlpatterns = [
-    path('', views.index, name="index"),
+    path('', views.IndexView.as_view(), name="index"),
     path('admin/', admin.site.urls),
     path('base_app/', include("base_app.urls"))
 ]

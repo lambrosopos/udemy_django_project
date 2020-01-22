@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 {% extends 'registering_app/base.html' %}
 {% load staticfiles%}
 
@@ -11,7 +10,7 @@
 <!-- action="{% url 'registering_app:user_login' %}" -->
 <div class="jumbotron">
     <h1>Login</h1>
-    <!-- <form method="post">
+    <form method="post">
         {% csrf_token %}
         <label for="username">Username :</label>
         <input type="text" name="username" placeholder="Username">
@@ -22,7 +21,7 @@
         <input type="submit" name="" value="Login">
 
 
-    </form> -->
+    </form>
 </div>
 
 {% endblock %}
