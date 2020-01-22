@@ -141,5 +141,3 @@ STATICFILES_DIRS = [
 # Media files (User content)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
-
-LOGIN_URL = '/registering_app/registerUser/'
