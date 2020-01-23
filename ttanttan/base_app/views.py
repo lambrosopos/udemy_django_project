@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
+from django.views.generic.edit import FormView
 from base_app.forms import UserForm, UserProfileInfoForm
 
 # Create your views here.
