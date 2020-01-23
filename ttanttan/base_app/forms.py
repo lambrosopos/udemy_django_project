@@ -23,5 +23,5 @@ class UserProfileInfoForm(forms.ModelForm):
 
         widgets = {
             'portfolioSite':forms.URLInput(attrs={'class':'form-control'}),
-            'profilePic':forms.FileInput(attrs={'class':'custom-file-input'}),
+            # 'profilePic':forms.FileInput(attrs={}),
         }
