@@ -10,7 +10,7 @@ class UserProfileInfo(models.Model):
 
     # Additional 
     portfolioSite = models.URLField(blank=True)
-    profilePic = models.ImageField(upload_to="profile_pics", blank=True)
+    profilePic = models.ImageField(upload_to="profilePics", blank=True)
 
     def __str__(self):
         return self.user.username
