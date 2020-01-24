@@ -1,0 +1,23 @@
+/* Navigation Bar */
+.techfont {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.custom-navbar {
+
+}
+
+.big-brand {
+  /* font-size: 1.5em; */
+}
+
+.centerstage {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.nav-item {
+  font-size: 0.7em;
+}
