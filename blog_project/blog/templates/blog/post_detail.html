@@ -40,10 +40,10 @@
         {% if not comment.approved_comment %}
 
           <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}">
-            <span class="glyphicon glyphicon-remove"></span>
+            <span class="glyphicon glyphicon-remove">Remove</span>
           </a>
           <a class="btn btn-primary" href="{% url 'comment_approve' pk=comment.pk %}">
-            <span class="glyphicon glyphicon-ok"></span>
+            <span class="glyphicon glyphicon-ok">Confirm</span>
           </a>
         {% endif %}
         <p>{{ comment.text|safe|linebreaksbr }}</p>

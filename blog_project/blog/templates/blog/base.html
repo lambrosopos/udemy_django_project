@@ -22,37 +22,39 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-default techfont custom-navbar">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a class="navbar-brand big-brand" href="{% url 'post_list' %}">My Blog</a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark techfont custom-navbar">
+        <a class="navbar-brand abs big-brand" href="{% url 'post_list' %}">My Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li>
-                    <a href="{% url 'about' %}">About</a>
-                </li>
-                <li>
-                    <a href="https://www.github.com">Github</a>
-                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.github.com">Github</a class="nav-link">
+                </li class="nav-item">
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
-                <li>
-                    <a href="{% url 'post_new' %}">New Post</a>
+                <li class="nav-item">
+                    <a class="nav-link"href="{% url 'post_new' %}">New Post</a>
                 </li>
-                <li>
-                    <a href="{% url 'post_draft_list' %}">Drafts</a>
+                <li class="nav-item">
+                    <a class="nav-link"href="{% url 'post_draft_list' %}">Drafts</a>
                 </li>
-                <li>
-                    <a href="{% url 'logout' %}">Logout</a>
+                <li class="nav-item">
+                    <a class="nav-link"href="{% url 'logout' %}">Logout</a>
                 </li>
-                <li>
-                    <a>Welcome {{user.username}}!</a>
+                <li class="nav-item">
+                    <a class="nav-link">Welcome {{ user.username }}!</a>
                 </li>
                 
                 {% else %}
-                <li>
-                    <a href="{% url 'login' %}"><span class="glyphicon glyphicon-user"></span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>

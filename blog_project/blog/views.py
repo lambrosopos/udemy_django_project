@@ -12,7 +12,7 @@ from blog.forms import PostForm, CommentForm
 
 # Create your views here.
 class AboutView(TemplateView):
-    template_name = 'about.html'
+    template_name = 'blog/about.html'
 
 
 class PostListView(ListView):
@@ -74,7 +74,7 @@ class DraftListView(LoginRequiredMixin, ListView):
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.publish
+    post.publish()
     return redirect('post_detail', pk=pk)
 
 
