@@ -13,8 +13,10 @@ class IndexView(View):
 class LoginView(View):
 
     def get(self, request):
-        return render(request, "base_app/login.html")
+        return render(request, "base_app/registration/login.html")
 
+def logoutSuccess(request):
+    return render(request, "base_app/registration/logout_success.html")
 
 def registerView(request):
     
@@ -52,4 +54,4 @@ def registerView(request):
             'registered' : registered,
         }
 
-        return render(request, "base_app/registration.html", context=context_dict)
+        return render(request, "base_app/registration/registration.html", context=context_dict)
