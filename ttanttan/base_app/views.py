@@ -15,6 +15,8 @@ class LoginView(View):
     def get(self, request):
         return render(request, "base_app/registration/login.html")
 
+def logoutSuccess(request):
+    return render(request, "base_app/registration/logout_success.html")
 
 def registerView(request):
     
