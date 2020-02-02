@@ -18,6 +18,8 @@ from django.urls import path, include
 from simplesocial import views as simplesocial_views
 
 urlpatterns = [
+    path('', simplesocial_views.HomePage.as_view(), name="home"),
     path('admin/', admin.site.urls),
-    path('', simplesocial_views.HomePage.as_view(), name="home")
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
