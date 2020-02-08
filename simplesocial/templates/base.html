@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,18 +15,31 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="{% statc 'simplesocial/static/css/master.css' %}">
+  <link rel="stylesheet" href="{% static 'simplesocial/static/css/master.css' %}">
 
 
 </head>
 <body>
   <nav class="navbar mynav" role="navigation" id="navbar">
-
+    <div class="container">
+      <a href="{% url 'home' %}" class="naver-brand mynav">Social</a>
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+          <li><a href="">Post</a></li>
+          <li><a href="">Groups</a></li>
+          <li><a href="">Create Group</a></li>
+          <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
+        {% else %}
+          <li><a href="">Groups</a></li>
+          <li><a href="{% url 'accounts:login' %}">Login</a></li>
+          <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
+        {% endif %}
+      </ul>
+    </div>
   </nav>
-
-
-  {% block content %}
-
-  {% endblock %}
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
 </body>
 </html>

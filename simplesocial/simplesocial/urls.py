@@ -20,6 +20,8 @@ from simplesocial import views as simplesocial_views
 urlpatterns = [
     path('', simplesocial_views.HomePage.as_view(), name="home"),
     path('admin/', admin.site.urls),
+    path('thanks/', simplesocial_views.ThanksPage.as_view(), name='thanks'),
+    path('test/', simplesocial_views.TestPage.as_view(), name='test'),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
